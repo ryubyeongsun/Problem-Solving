@@ -1,0 +1,8 @@
+select C.ITEM_ID, C.ITEM_NAME , C.RARITY
+from ITEM_INFO A
+join ITEM_TREE B
+on A.ITEM_ID = B.PARENT_ITEM_ID
+join ITEM_INFO C
+on B.ITEM_ID = C.ITEM_ID
+where A.RARITY = "RARE"
+order by ITEM_ID DESC;
