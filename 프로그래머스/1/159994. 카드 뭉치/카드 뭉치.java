@@ -9,30 +9,22 @@ class Solution {
         for (int i = 0; i < goal.length; i++) {
 
             String word = goal[i];
-            boolean chk = false;
 
             if (firstcard < cards1.length && word.equals(cards1[firstcard])) {
                 firstcard++;
-                chk = true;
             }
-            if (!chk) {
-                if (secondcard < cards2.length && word.equals(cards2[secondcard])) {
+            else if (secondcard < cards2.length && word.equals(cards2[secondcard])) {
                     secondcard++;
-                    chk = true;
-                }
+               
             }
-            if (!chk) {
-                an = false;
-                break;
+            else {
+                return "No";
             }
+            
         }
 
-        if (an) {
-            answer = "Yes";
-        } else {
-            answer = "No";
-        }
 
-        return answer;
+
+        return "Yes";
     }
 }
