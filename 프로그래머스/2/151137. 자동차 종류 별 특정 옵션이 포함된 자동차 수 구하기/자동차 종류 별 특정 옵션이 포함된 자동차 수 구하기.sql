@@ -1,0 +1,5 @@
+select CAR_TYPE, COUNT(CAR_ID) AS CARS
+from CAR_RENTAL_COMPANY_CAR
+where OPTIONS LIKE "%가죽%" OR OPTIONS LIKE "%통풍%" OR OPTIONS LIKE "%열선%"
+group by CAR_TYPE
+order by CAR_TYPE ASC;
